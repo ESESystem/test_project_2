@@ -2,3 +2,13 @@ body
 {
     background-color: darkslateblue;
 }
+
+p
+{
+    color:rgb(114, 29, 29)
+}
+
+h2
+{
+    font-size: 50px;
+}
