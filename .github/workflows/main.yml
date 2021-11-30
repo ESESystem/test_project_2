@@ -9,20 +9,14 @@ on:
     branches: [ main ]
 
 jobs:
-#====
   testing:
-  #=======
     runs-on: ubuntu-latest
-    #=======
-    
     steps:
-      - name: print_hello
-      - run: echo "Hello World from testing"     
+    - name: print_hello
+    - run: echo "Hello World from testing"     
     
   deploy:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: print_hello
-      - run: echo "Hello World from deploy"  
-    
+    - name: print_hello
+    - run: echo "Hello World from deploy"  
