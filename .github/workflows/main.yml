@@ -1,0 +1,32 @@
+#==========================
+# Copyleft (c) by ESWE 2021
+# version 0.0.1
+#==========================
+name: GitHub_Actions_One
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print_hello
+        run: echo "Hello World from testing"
+        
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+    
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print_hello
+        run: echo "Hello World from deploy"  
+    
+
+
