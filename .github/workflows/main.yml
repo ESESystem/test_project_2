@@ -1,0 +1,28 @@
+#==========================
+# Copyleft (c) by ESWE 2021
+# version 0.0.1
+#==========================
+name: GitHub_Actions_One
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+#====
+  testing:
+  #=======
+    runs-on: ubuntu-latest
+    #=======
+    
+    steps:
+      - name: print_hello
+      - run: echo "Hello World from testing"     
+    
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: print_hello
+      - run: echo "Hello World from deploy"  
+    
