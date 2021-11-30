@@ -20,6 +20,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: make_go
+        run: make go
     
   deploy:
     runs-on: ubuntu-latest
