@@ -11,12 +11,22 @@ on:
 jobs:
   testing:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: print_hello
-    - run: echo "Hello World from testing"     
+      - name: print_hello
+        run: echo "Hello World from testing"
+        
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
     
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: print_hello
-    - run: echo "Hello World from deploy"  
+      - name: print_hello
+        run: echo "Hello World from deploy"  
+    
+
+
