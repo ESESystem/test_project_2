@@ -3,6 +3,9 @@
 # version 0.0.1
 #==========================
 name: GitHub_Actions_One
+env: 
+  APPLICATION_NAME   : "MyFlask"
+  DEPLOY_PACKAGE_NAME: "flask_deploy_ver_${{ gitnhub.sha }}"
 
 on:
   push:
@@ -20,9 +23,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
-      - name: make_go
-        run: make go
+          
+      - name: Execure few commands
+        run: |
+          echo "Hello Message_one"
+          echo "Hello Message_two"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
     
   deploy:
     runs-on: ubuntu-latest
@@ -32,5 +38,9 @@ jobs:
       - name: print_hello
         run: echo "Hello World from deploy"  
     
-
+      - name: Printing Deployment package
+        run: echo "Deploy package name is ${{ env. DEPLOY_PACKAGE_NAME }}"
+    
+      - name: make_go
+        run: make go
 
