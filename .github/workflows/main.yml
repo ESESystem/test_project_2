@@ -43,10 +43,24 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: [testing]
-    
+    env:
+      VAR_1: "This is Job level Variable1"
+      VAR_2: "This is Job level Variable2"
+            
     steps:
+      - name: Git clone repository ${{ env.NAME_REPOSITORY }}
+        uses: actions/checkout@v1
+    
       - name: print_hello
-        run: echo "Hello World from deploy"  
+        run: echo "Hello World from deploy"
+        
+      - name: Print env vars
+        run: |
+          echo "Var_1 = ${{ env.VAR_1 }}"
+          echo "Var_2 = ${{ env.VAR_2 }}"
+          echo "Var_3 = $LOCAL_VAR"
+        env:
+          LOCAL_VAR: "This is Local Var"
     
       - name: Printing Deployment package
         run: echo "Deploy package name is ${{ env. DEPLOY_PACKAGE_NAME }}"
@@ -54,8 +68,7 @@ jobs:
       - name: Lets test some packages if her right thear 
         run: |
           aws --version
-          zip
+          zip --version
     
       - name: make_go
         run: make go
-
