@@ -71,4 +71,6 @@ jobs:
           zip --version
     
       - name: make_go
-        run: make go
+        run: |
+          make all
+          make go
