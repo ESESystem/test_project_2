@@ -1,8 +1,11 @@
 <a id="anchor"></a>
-
-Status of Last Deployment:<br>
-<img src="https://github.com/ESESystem/test_project_2/workflows/GitHub_Actions_One/badge.svg?branch=main"><br>
 Copyleft by ESESystem 2021
+
+Status of Last Deployment:
+[<br>
+<img src="https://github.com/ESESystem/test_project_2/workflows/GitHub_Actions_One/badge.svg?branch=main">
+<br>](https://github.com/ESESystem/test_project_2/actions)
+
           
 # Заголовок_1
 ## Заголовок_2
